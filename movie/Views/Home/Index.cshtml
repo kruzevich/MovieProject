@@ -3,10 +3,33 @@
     ViewBag.Title = "Index";
 }
 
-<h2>@DateTime.Now</h2>
-<p>My first site</p>
-<ul>
-    <li>Menu</li>
-    <li>Contacts</li>
-</ul>
+
+@using System.Activities.Statements
+@model System.Collections.ObjectModel.Collection<Movie.Models.MovieModel>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="vieport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<div>
+    @foreach (var item in Model)
+    {<div>
+         <b>@item.Name</b>
+
+     </div>
+    }
+
+</div>
+
+
+</body>
+
+
+
+
+
+</html>
 
